@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "1",
+    "Recipe Title": "Spaghetti Carbonara",
+    "Ingredients": ["spaghetti", "eggs", "pancetta", "parmesan cheese", "black pepper"]
+  },
+  {
+    "_id": "2",
+    "Recipe Title": "Chicken Curry",
+    "Ingredients": ["chicken", "onion", "garlic", "ginger", "tomatoes", "coconut milk", "curry powder"]
+  },
+  {
+    "_id": "3",
+    "Recipe Title": "Beef Tacos",
+    "Ingredients": ["ground beef", "taco seasoning", "tortillas", "lettuce", "cheese", "salsa"]
+  },
+  {
+    "_id": "4",
+    "Recipe Title": "Veggie Stir-fry",
+    "Ingredients": ["broccoli", "bell peppers", "carrots", "soy sauce", "sesame oil", "garlic"]
+  },
+  {
+    "_id": "5",
+    "Recipe Title": "Margherita Pizza",
+    "Ingredients": ["pizza dough", "tomato sauce", "mozzarella cheese", "fresh basil", "olive oil"]
+  },
+  {
+    "_id": "6",
+    "Recipe Title": "Caesar Salad",
+    "Ingredients": ["romaine lettuce", "croutons", "parmesan cheese", "Caesar dressing"]
+  },
+  {
+    "_id": "7",
+    "Recipe Title": "Pancakes",
+    "Ingredients": ["flour", "eggs", "milk", "baking powder", "sugar", "butter"]
+  },
+  {
+    "_id": "8",
+    "Recipe Title": "Grilled Cheese Sandwich",
+    "Ingredients": ["bread", "cheddar cheese", "butter"]
+  },
+  {
+    "_id": "9",
+    "Recipe Title": "Vegetable Soup",
+    "Ingredients": ["carrots", "potatoes", "celery", "onions", "garlic", "vegetable broth", "thyme"]
+  }
+]
