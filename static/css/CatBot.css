@@ -41,7 +41,8 @@ h1{
   padding-right: 5%;
   text-indent: 30px;
 }
-#recipe {
+#response {
+  background-color: #79452a;
   color: aliceblue;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

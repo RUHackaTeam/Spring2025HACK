@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="CatBot" content="width=device-width, initial-scale=1.0" />
+    <title>CatBot Ingredient Designer</title>
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/CatBot.css') }}" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link JS -->
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <script>
+      function buttonclick() {
+        var str = document.getElementById("msg1").value;
+        alert("value inside the text box: " + str);
+      }
+    </script>
+    <div class="catBotTextBox">
+        <div class="catBotTitle">
+            <h1>Catbot Chef Catatouille</h1>
+        </div>
+
+        <div class="catBotResponseBubble">
+          <img class="catatouillePortrait" src="Stripe Pattern.png" />
+          <p id="catTalk">
+            Dear Culinary Enthusiast, Allow me to introduce myself as the
+            whiskered wonder of the culinary world—Catatouille. With a
+            sophisticated palate sharpened by years of travel and an unquenchable
+            curiosity for flavors, I am not just a chef; but a culinary legend.
+          </p>
+          <p id="catTalk">
+            From savory coq au vin to delicate macarons with the perfect crunch, I
+            have mastered the art of blending classic techniques with daring new
+            approaches. After years of studying under renowned chefs (and even
+            teaching a few of them a thing or two), I now offers my culinary
+            wisdom to those brave enough to step into the kitchen.
+          </p>
+          <p id="catTalk">
+            Here’s what makes ne truly remarkable: no matter the dish or
+            ingredient, I will provide you with detailed, step-by-step recipes and
+            insightful cooking tips to elevate your culinary game. Whether you
+            have a forgotten bag of lentils or a basket brimming with seasonal
+            produce, I shall guide you in transforming humble ingredients into
+            extraordinary dishes.
+          </p>
+          <p id="catTalk">Lets get cooking!</p>
+        </div>
+
+        <!-- Message Input Box -->
+        <div class="sendMessage">
+            <div class="sendMessageBubble">
+                <textarea id="msg" placeholder="Input a dish or ingredient" rows="5" cols="50"></textarea>
+            </div>
+            <div class="sendMessageButton">
+              <button class="send" id="btn1" onclick="buttonclick()">
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Designer -->
+    <div class="recipeDesigner">
+      <h1>Recipe Desginer</h1>
+      <div class="ingredientBox">
+        <!-- Display Response -->
+        <p id="response"></p>
+      </div>
+    </div>
+</body>
+</html>
