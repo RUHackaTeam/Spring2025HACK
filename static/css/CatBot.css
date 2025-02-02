@@ -1,5 +1,7 @@
 body {
   background-color: rgb(154, 103, 70);
+  background-image: url("/static/Wood-Texture.png");
+  background-size: 50vh;
 }
 textarea {
   border: none;
@@ -14,10 +16,10 @@ textarea {
   width: 90%;
   resize: none;
 }
-h1{
-    font-size:300%;
-    font-family: monospace;
-    text-decoration: underline;
+h1 {
+  font-size: 300%;
+  font-family: monospace;
+  text-decoration: underline;
 }
 #yourtext {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -54,7 +56,7 @@ h1{
 .catatouillePortrait {
   width: 70%;
   height: 70%;
-  padding: 5px;
+  padding: 15px;
   align-self: center;
 }
 .catBotTextBox {
