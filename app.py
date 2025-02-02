@@ -1,18 +1,21 @@
 from flask import Flask, request, jsonify, render_template
 import google.generativeai as genai
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+connection_string = os.getenv("MONGODB_CONNECTION_STRING")
+cak = os.getenv("CRACK_API")
 
 # Initialize Flask app
 app = Flask(__name__)
-
-# Database and AI setup
-connection_string = "mongodb+srv://senthilbhanavi:bf8GipzsPOALyoBg@cluster1.k0h8c.mongodb.net/"
 client = MongoClient(connection_string)
 db = client["Food"]
 collection = db["recipes"]
 
 # Configure Gemini AI
-genai.configure(api_key="AIzaSyBvIuqa0GqJUrsIHDiYX3Rx90Onyl24JhQ")
+genai.configure(api_key=cak)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 @app.route("/")
