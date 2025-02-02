@@ -31,21 +31,24 @@ def find_recipe_by_title(title):
 def catch_user_input():
     data = request.get_json()
     title_input = data.get("message", "").strip()  # Fix missing title_input
-    
+    title_input = title_input.lower()
+
     if not title_input:
         return jsonify({"error": "Title is required"}), 400
 
-    print("starting search")
     recipe = find_recipe_by_title(title_input)
-    print("recipe search")
+    if recipe == None:
+        recipe = find_recipe_by_title(title_input+"s")
+
     if recipe:
-        print("found recipe")
         recipe_title, ingredients = recipe
         ingredients_text = ", ".join(ingredients)
 
         response = model.generate_content(
             f"Generate a recipe for {recipe_title} with these ingredients: {ingredients_text}. "
             "Format it like this: \nName: __ \nIngredients: __, __, __ \nSteps: \n1. __ \n2. __ \n3. __"
+            "Include at the top of the recipe the allergies that each dish may have, maybe like contains peanuts or contains poultry"
+            "Try to keep it healthy but consider the materials accessible"
         )
 
         if hasattr(response, 'text'):

@@ -10,7 +10,7 @@ document.querySelector(".send").addEventListener("click", function () {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById("response").innerText = "Bot Response: " + data.message;
+        document.getElementById("response").innerText = data.message;
         document.getElementById("msg").value = ""; // Clear textarea after sending
     })
     .catch(error => console.error("Error:", error));
