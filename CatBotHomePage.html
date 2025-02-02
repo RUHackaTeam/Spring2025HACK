@@ -15,101 +15,61 @@
   </head>
 
   <body>
+    <script src="CatBotFunctions.js"></script>
     <div class="catBotTextBox">
       <div class="catBotTitle">
-        <h1>CATBOT CHEF</h1>
+        <h1>Catbot Chef Catatouille</h1>
       </div>
-      <div class="catBotTextBubble">
-        <p id="catbot">
+      <div class="catBotResponseBubble">
+        <img class="catatouillePortrait" src="Stripe Pattern.png" />
+        <p id="catTalk">
+          Dear Culinary Enthusiast, Allow me to introduce myself as the
+          whiskered wonder of the culinary world—Catatouille. With a
+          sophisticated palate sharpened by years of travel and an unquenchable
+          curiosity for flavors, I am not just a chef; but a culinary legend.
+        </p>
+        <p id="catTalk">
+          From savory coq au vin to delicate macarons with the perfect crunch, I
+          have mastered the art of blending classic techniques with daring new
+          approaches. After years of studying under renowned chefs (and even
+          teaching a few of them a thing or two), I now offers my culinary
+          wisdom to those brave enough to step into the kitchen.
+        </p>
+        <p id="catTalk">
+          Here’s what makes ne truly remarkable: no matter the dish or
+          ingredient, I will provide you with detailed, step-by-step recipes and
+          insightful cooking tips to elevate your culinary game. Whether you
+          have a forgotten bag of lentils or a basket brimming with seasonal
+          produce, I shall guide you in transforming humble ingredients into
+          extraordinary dishes.
+        </p>
+        <p id="catTalk">Lets get cooking!</p>
+      </div>
+      <!-- <div class="catBotTextBubble">
+        <p id="yourtext">
           hellow catbot how are you, im doing great today budddyy
         </p>
-      </div>
-      <div class="catBotResponseBubble">
-        <p id="catbot">MEOW MEOW MEOW MEOW MEOW MEOW MEW MEW MEOW MOEW</p>
-      </div>
-      <div class="catBotTextBubble">
-        <p id="catbot">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente qui
-          doloribus nemo quibusdam, iure veniam quaerat aut rerum earum, optio
-          velit, atque unde perspiciatis. Neque totam quidem quibusdam laborum
-          at.
-        </p>
-      </div>
-      <div class="catBotTextBubble">
-        <p id="catbot">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          dolorum necessitatibus assumenda aliquid suscipit fuga nobis error
-          est, non accusantium voluptatem, atque perspiciatis quibusdam minima
-          voluptas similique reiciendis ut iste.
-        </p>
-      </div>
-      <div class="catBotResponseBubble">
-        <p id="catbot">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-          consequatur est voluptatem fugit harum vero asperiores eius.
-          Reprehenderit nisi ratione praesentium neque, iure modi harum debitis
-          minus aperiam sit animi. Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Alias vel sunt, saepe rem aliquid voluptatum, dolor
-          voluptates eos dicta at facere reprehenderit beatae amet optio. Optio
-          laboriosam porro harum ullam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sapiente numquam odit esse eveniet, ad quibusdam
-          reiciendis omnis iusto ab pariatur magni minima necessitatibus
-          praesentium soluta. Nostrum ratione molestiae cumque laborum? Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt,
-          sint officia id quasi ipsum culpa exercitationem perspiciatis
-          blanditiis, voluptatibus dolores? Pariatur, expedita quae! Obcaecati
-          ut fugiat culpa ullam autem.
-        </p>
-      </div>
+      </div> -->
+
       <div class="sendMessage">
         <div class="sendMessageBubble">
           <textarea
-            id="msg"
-            placeholder="Message CatBot Chef :3"
+            id="msg1"
+            placeholder="Input a dish or ingredient"
             rows="5"
             cols="50"
           ></textarea>
         </div>
         <div class="sendMessageButton">
-          <button class="send"><i class="fa-regular fa-paper-plane"></i></button>
+          <button class="send" id="btn1" onclick="buttonclick()">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
         </div>
       </div>
     </div>
     <div class="recipeDesigner">
       <h1>Recipe Desginer</h1>
       <div class="ingredientBox">
-        <p id="recipe">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-          consequatur est voluptatem fugit harum vero asperiores eius.
-          Reprehenderit nisi ratione praesentium neque, iure modi harum debitis
-          minus aperiam sit animi. Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Alias vel sunt, saepe rem aliquid voluptatum, dolor
-          voluptates eos dicta at facere reprehenderit beatae amet optio. Optio
-          laboriosam porro harum ullam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sapiente numquam odit esse eveniet, ad quibusdam
-          reiciendis omnis iusto ab pariatur magni minima necessitatibus
-          praesentium soluta. Nostrum ratione molestiae cumque laborum? Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt,
-          sint officia id quasi ipsum culpa exercitationem perspiciatis
-          blanditiis, voluptatibus dolores? Pariatur, expedita quae! Obcaecati
-          ut fugiat culpa ullam autem.
-        </p>
-        <p id="recipe">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-          consequatur est voluptatem fugit harum vero asperiores eius.
-          Reprehenderit nisi ratione praesentium neque, iure modi harum debitis
-          minus aperiam sit animi. Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Alias vel sunt, saepe rem aliquid voluptatum, dolor
-          voluptates eos dicta at facere reprehenderit beatae amet optio. Optio
-          laboriosam porro harum ullam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sapiente numquam odit esse eveniet, ad quibusdam
-          reiciendis omnis iusto ab pariatur magni minima necessitatibus
-          praesentium soluta. Nostrum ratione molestiae cumque laborum? Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt,
-          sint officia id quasi ipsum culpa exercitationem perspiciatis
-          blanditiis, voluptatibus dolores? Pariatur, expedita quae! Obcaecati
-          ut fugiat culpa ullam autem.
-        </p>
         <p id="recipe">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
           consequatur est voluptatem fugit harum vero asperiores eius.
