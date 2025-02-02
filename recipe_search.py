@@ -1,11 +1,18 @@
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+connection_string = os.getenv("MONGODB_CONNECTION_STRING")
+cak = os.getenv("CRACK_API")
+
 import google.generativeai as genai
 from pymongo import MongoClient
 
-connection_string = "mongodb+srv://senthilbhanavi:bf8GipzsPOALyoBg@cluster1.k0h8c.mongodb.net/"
 
 client = MongoClient(connection_string)
 
-genai.configure(api_key="AIzaSyBvIuqa0GqJUrsIHDiYX3Rx90Onyl24JhQ")
+genai.configure(api_key=cak)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 db = client["Food"]
@@ -24,7 +31,7 @@ def find_recipe_by_title(title):
 
 if __name__ == "__main__":
     # Example usage
-    title_input = "Caesar Salad" #string
+    title_input = "Margherita Pizza" #string
     result = find_recipe_by_title(title_input)
     if result:
         recipe_title, ingredients = result
